@@ -77,7 +77,7 @@ Role.destroy_all
 # Generate models and tables, according to the domain model
 # TODO!
 
-#my models and associations can found in their files
+    #my models and associations can found in their files
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
