@@ -70,12 +70,67 @@
 # Use `Model.destroy_all` code.
 # TODO!
 
+Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
+
 # Generate models and tables, according to the domain model
 # TODO!
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+#person data
+person = Person.new
+person.name = "Christopher Nolan"
+person.save
+
+person = Person.new
+person.name = "Christian Bale"
+person.save
+
+person = Person.new
+person.name = "Michael Caine"
+person.save
+
+person = Person.new
+person.name = "Liam Neeson"
+person.save
+
+person = Person.new
+person.name = "Katie Holmes"
+person.save
+
+person = Person.new
+person.name = "Gary Oldman"
+person.save
+
+person = Person.new
+person.name = "Heath Ledger"
+person.save
+
+person = Person.new
+person.name = "Aaron Eckhart"
+person.save
+
+person = Person.new
+person.name = "Maggie Gyllenhaal"
+person.save
+
+person = Person.new
+person.name = "Tom Hardy"
+person.save
+
+person = Person.new
+person.name = "Joseph Gordon-Levitt"
+person.save
+
+person = Person.new
+person.name = "Anne Hathaway"
+person.save
+
+#movie data
 
 # Prints a header for the movies output
 puts "Movies"
