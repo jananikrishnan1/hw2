@@ -131,6 +131,99 @@ person.name = "Anne Hathaway"
 person.save
 
 #movie data
+director = Person.where({name: "Christopher Nolan"})[0]
+
+values = { title: "Batman Begins", year: 2005, rating: "PG-13", person_id: director.id }
+movie = Movie.new(values)
+movie.save
+
+values = { title: "The Dark Knight", year: 2008, rating: "PG-13", person_id: director.id }
+movie = Movie.new(values)
+movie.save
+
+values = { title: "The Dark Knight Rises", year: 2012, rating: "PG-13", person_id: director.id }
+movie = Movie.new(values)
+movie.save
+
+#role data
+batman_begins = Movie.where({title: "Batman Begins"})[0]
+the_dark_knight = Movie.where({title: "The Dark Knight"})[0]
+the_dark_night_rises = Movie.where({title: "The Dark Knight Rises"})[0]
+christian_bale = Person.where({name: "Christian Bale"})[0]
+michael_caine = Person.where({name: "Michael Caine"})[0]
+liam_neeson = Person.where({name: "Liam Neeson"})[0]
+katie_holmes = Person.where({name: "Katie Holmes"})[0]
+gary_oldman = Person.where({name: "Gary Oldman"})[0]
+heath_ledger = Person.where({name: "Heath Ledger"})[0]
+aaron_eckhart = Person.where({name: "Aaron Eckhart"})[0]
+maggie_gyllenhaal = Person.where({name: "Maggie Gyllenhaal"})[0]
+tom_hardy = Person.where({name: "Tom Hardy"})[0]
+joseph_gordon_levitt = Person.where({name: "Joseph Gordon-Levitt"})[0]
+anne_hathaway = Person.where({name: "Anne Hathaway"})[0]
+
+#Batman Begins Roles
+values = { movie_id: batman_begins.id, person_id: christian_bale.id, character_name: "Bruce Wayne" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: batman_begins.id, person_id: michael_caine.id, character_name: "Alfred" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: batman_begins.id, person_id: liam_neeson.id, character_name: "Ra's Al Ghul" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: batman_begins.id, person_id: katie_holmes.id, character_name: "Rachel Dawes" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: batman_begins.id, person_id: gary_oldman.id, character_name: "Commissioner Gordon" }
+role = Role.new(values)
+role.save
+
+#The Dark Knight Roles
+values = { movie_id: the_dark_knight.id, person_id: christian_bale.id, character_name: "Bruce Wayne" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: the_dark_knight.id, person_id: heath_ledger.id, character_name: "Joker" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: the_dark_knight.id, person_id: aaron_eckhart.id, character_name: "Harvey Dent" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: the_dark_knight.id, person_id: michael_caine.id, character_name: "Alfred" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: the_dark_knight.id, person_id: maggie_gyllenhaal.id, character_name: "Rachel Dawes" }
+role = Role.new(values)
+role.save
+
+#The Dark Knight Rises Roles
+
+values = { movie_id: the_dark_night_rises.id, person_id: christian_bale.id, character_name: "Bruce Wayne" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: the_dark_night_rises.id, person_id: gary_oldman.id, character_name: "Commissioner Gordon" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: the_dark_night_rises.id, person_id: tom_hardy.id, character_name: "Bane" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: the_dark_night_rises.id, person_id: joseph_gordon_levitt.id, character_name: "John Blake" }
+role = Role.new(values)
+role.save
+
+values = { movie_id: the_dark_night_rises.id, person_id: anne_hathaway.id, character_name: "Selina Kyle" }
+role = Role.new(values)
+role.save
 
 # Prints a header for the movies output
 puts "Movies"
