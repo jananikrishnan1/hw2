@@ -77,6 +77,8 @@ Role.destroy_all
 # Generate models and tables, according to the domain model
 # TODO!
 
+#my models and associations can found in their files
+
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
@@ -233,6 +235,12 @@ puts ""
 # Query the movies data and loop through the results to display the movies output
 # TODO!
 
+movies = Movie.all
+for movie in movies
+    director = Person.where({id: movie.person_id})[0]
+    puts "#{movie.title}    #{movie.year}   #{movie.rating}   #{director.name}"
+end
+
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
@@ -241,3 +249,10 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+
+roles = Role.all
+for role in roles
+    movie = Movie.where({id: role.movie_id})[0]
+    person = Person.where({id: role.person_id})[0]
+    puts "#{movie.title}    #{person.name}   #{role.character_name}"
+end
